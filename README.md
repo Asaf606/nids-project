@@ -61,15 +61,15 @@ sudo python3 sniffer.py
 -- If you see the problem about python module version please create virtual environment then try these steps-->
 
 -- Create virtual environment
-python3 -m venv .venv
+-->python3 -m venv .venv
 -- Activate it
-source .venv/bin/activate
+-->source .venv/bin/activate
 -- Upgrade pip
-python3 -m pip install --upgrade pip
+-->python3 -m pip install --upgrade pip
 -- Install required Pyhton packages for sniffign
-python3 -m pip install scapy requests
+-->python3 -m pip install scapy requests
 -- Run the sniffer with administrator privileges
-sudo .venv/bin/python3 sniffer.py
+-->sudo .venv/bin/python3 sniffer.py
 
 
 
