@@ -22,10 +22,19 @@ nids/
 ├── sniffer/
 │   └── sniffer.py       # Python packet capturing and detecting processes
 ├── server/
-│   ├── server.js        # Node.js Express API
-│   └── package.json
+│   ├── server.js        # Main Express server
+│   ├── package.json
+│   ├── data/
+│   │   └── users.json   # User credentials (admin & analyst)
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── alertRoutes.js
+│   │   └── adminRoutes.js
+│   └── utils/
+│       ├── auth.js
+│       └── userStore.js
 ├── dashboard/
-│   └── index.html       # Web dashboard
+│   └── index.html       # Zenith web dashboard
 └── README.md
 ```
 
@@ -90,10 +99,16 @@ dashboard/index.html
 
 | Method | URL | Description |
 |--------|-----|-------------|
-| POST | `/alert` | Receive alert from sniffer |
-| GET | `/alerts` | Get all alerts (newest first) |
+| POST | `/alerts` | Receive alert from sniffer |
+| GET | `/alerts` | Get all alerts (newest first, supports filters) |
 | GET | `/alerts/count` | Get counts by severity |
-| DELETE | `/alerts` | Clear all alerts |
+| GET | `/alerts/stats` | Get detailed statistics (charts, top IPs, daily data) |
+| GET | `/alerts/export` | Export alerts (JSON or CSV) |
+| PATCH | `/alerts/:id/status` | Update alert status |
+| PATCH | `/alerts/:id/priority` | Update alert priority (admin only) |
+| POST | `/alerts/:id/notes` | Add note to alert |
+| DELETE | `/alerts/:id` | Delete single alert (admin only) |
+| DELETE | `/alerts` | Clear all alerts (admin only) |
 
 ### Example — yOU CAN test it with sample as you can see belowww
 
