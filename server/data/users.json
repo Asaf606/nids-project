@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin",
+    "active": true,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "username": "superadmin",
+    "password": "superadmin123",
+    "role": "admin",
+    "active": true,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "username": "analyst1",
+    "password": "analyst123",
+    "role": "analyst",
+    "active": true,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "username": "analyst2",
+    "password": "analyst234",
+    "role": "analyst",
+    "active": true,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "username": "analyst3",
+    "password": "analyst345",
+    "role": "analyst",
+    "active": true,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "username": "analyst4",
+    "password": "Analystt",
+    "role": "analyst",
+    "active": true,
+    "createdAt": "2026-04-07T17:18:16.927Z"
+  }
+]
