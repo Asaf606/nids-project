@@ -64,7 +64,10 @@ node server.js
 
 ```bash
 cd sniffer
-pip3 install scapy requests
+python3 -m venv venv
+source venv/bin/activate
+pip install scapy requests
+
 sudo python3 sniffer.py
 ```
 -- If you see the problem about python module version please create virtual environment then try these steps-->
