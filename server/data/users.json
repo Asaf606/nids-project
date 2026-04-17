@@ -2,49 +2,120 @@
   {
     "id": 1,
     "username": "admin",
-    "password": "admin123",
+    "password": "pbkdf2$010d1c215b641552c69000c902a4f51f$f9432a9ff5487a88e428b96a57d6ba9194b603749072b0dde5d240029ac916a3a9d4dd4e0bfad38fb77dc9a6bd18c920a29c7359c04f2c42021309272ef122b8",
     "role": "admin",
     "active": true,
-    "createdAt": "2026-01-01T00:00:00.000Z"
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "email": "admin@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
   },
   {
     "id": 2,
     "username": "superadmin",
-    "password": "superadmin123",
+    "password": "pbkdf2$89254b1cab6931df20fb013d5ff88b27$d8c676e086af5ee005a264e12ab0bfc38bcc6a0dcf56ebd54002a64400fccd340c7a21025704f3a4ae4820deb73ecdfb4fd8c734c210182b9fa10dbc962afdd7",
     "role": "admin",
     "active": true,
-    "createdAt": "2026-01-01T00:00:00.000Z"
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "email": "superadmin@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
   },
   {
     "id": 3,
     "username": "analyst1",
-    "password": "analyst123",
+    "password": "pbkdf2$42a7b53d07594e0ea93c594f2e00380f$36f864804dbf76398bda0346e5633c30757b63b9baef9c635d1673874d0cc2e3ba9db3a475b5bd97239eb271bce20deb8ad3813d8196239fea334d47c70b29e3",
     "role": "analyst",
     "active": true,
-    "createdAt": "2026-01-01T00:00:00.000Z"
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "email": "analyst1@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
   },
   {
     "id": 4,
     "username": "analyst2",
-    "password": "analyst234",
+    "password": "pbkdf2$548d837119754d93bd090eba0b2759b8$490ef7df5a6c6044719c4db0bde641d7640219a56b058a163acb9bd9b2c93140fd9ce986aa7358f870123646a272423db606ee9a2fd447a4c2400b593da2037c",
     "role": "analyst",
     "active": true,
-    "createdAt": "2026-01-01T00:00:00.000Z"
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "email": "analyst2@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
   },
   {
     "id": 5,
     "username": "analyst3",
-    "password": "analyst345",
+    "password": "pbkdf2$1529267e4b2aa45d64a2240e48f5280a$8a19d4ad1318f9e9c612871da525f5d761a23d1e44aa8a8c49e34a0272aa7140474835fe8b110e4a52ec744f0ca359c59b6475e751273fcf4706a52fcd93b195",
     "role": "analyst",
     "active": true,
-    "createdAt": "2026-01-01T00:00:00.000Z"
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "email": "analyst3@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
   },
   {
     "id": 6,
     "username": "analyst4",
-    "password": "Analystt",
+    "password": "pbkdf2$d3a319d56d090957ddada0487d37bdeb$827719822384ed6bda00c18777bbf76b7e5997ebdd8d52f23c00e8be4c71a4d92ca3b4b17c4c846d13db494b6b0b4b2e44a459e46ee4636784794cb79ba5670b",
     "role": "analyst",
     "active": true,
-    "createdAt": "2026-04-07T17:18:16.927Z"
+    "createdAt": "2026-04-07T17:18:16.927Z",
+    "email": "analyst4@zenith.local",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    },
+    "emailVerified": true,
+    "approvedByAdmin": true
+  },
+  {
+    "id": 7,
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "pbkdf2$1f3c802606dd84631bc3031e7a670145$596fd8282cbd99a885b556d978b277222234e3270336c53cb82d1f45aa7e5a6e6ad4436c3a60b083f42b42ab31dc7566eecc2d9195364b28bc84c3a76beb1436",
+    "role": "analyst",
+    "active": false,
+    "emailVerified": true,
+    "approvedByAdmin": true,
+    "createdAt": "2026-04-17T07:14:15.825Z",
+    "notificationPreferences": {
+      "email": false,
+      "sms": false,
+      "app": true,
+      "criticalOnly": false
+    }
   }
 ]

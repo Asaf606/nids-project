@@ -18,6 +18,10 @@ const alerts = [];
 const blockedIPs = [];
 const firewallRules = [];
 const terminatedSessions = [];
+const auditTrail = [];
+const notifications = [];
+const verificationTokens = {};
+const resetTokens = {};
 const detectionRules = [
   { id: 1, name: 'SSH Port Scan', type: 'signature', enabled: true, severity: 'low', description: 'TCP SYN to port 22' },
   { id: 2, name: 'SQL Injection – SELECT', type: 'signature', enabled: true, severity: 'high', description: 'SELECT keyword in payload' },
@@ -27,23 +31,26 @@ const detectionRules = [
   { id: 6, name: 'Brute Force – SSH', type: 'anomaly', enabled: true, threshold: 10, description: 'Auth attempts per 10s window' },
 ];
 const sessions = {};
+const authRequired = requireAuth(sessions);
+const adminRequired = requireAdmin(sessions);
 
-app.use('/auth', createAuthRouter({ sessions }));
-app.use('/alert', createAlertRouter({ alerts, requireAuth: requireAuth(sessions), requireAdmin: requireAdmin(sessions) }));
-app.use('/alerts', createAlertRouter({ alerts, requireAuth: requireAuth(sessions), requireAdmin: requireAdmin(sessions) }));
+app.use('/auth', createAuthRouter({ sessions, verificationTokens, resetTokens, notifications, requireAuth: authRequired }));
+app.use('/alert', createAlertRouter({ alerts, auditTrail, notifications, requireAuth: authRequired, requireAdmin: adminRequired }));
+app.use('/alerts', createAlertRouter({ alerts, auditTrail, notifications, requireAuth: authRequired, requireAdmin: adminRequired }));
 app.use('/admin', createAdminRouter({
   detectionRules,
   blockedIPs,
   firewallRules,
   terminatedSessions,
   sessions,
-  requireAuth: requireAuth(sessions),
-  requireAdmin: requireAdmin(sessions),
+  notifications,
+  requireAuth: authRequired,
+  requireAdmin: adminRequired,
 }));
 
 app.listen(PORT, () => {
   console.log(`Zenith backend running on http://localhost:${PORT}`);
   console.log(`Dashboard: http://localhost:${PORT}/index.html`);
   console.log(`Users file: ${USERS_FILE}`);
-  console.log(`Seeded users: ${DEFAULT_USERS.length} (2 admin, 3 analyst)`);
+  console.log(`Seeded users: ${DEFAULT_USERS.length}`);
 });
